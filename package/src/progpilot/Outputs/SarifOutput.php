@@ -81,6 +81,10 @@ class SarifOutput
             $propertyBag->addProperty('vuln_cwe', $progpilotResult['vuln_cwe']);
             $propertyBag->addProperty('vuln_id', $progpilotResult['vuln_id']);
             $propertyBag->addProperty('vuln_name', $progpilotResult['vuln_name']);
+            $propertyBag->addProperty('type', "");
+            $propertyBag->addProperty('rips_id', "");
+            $propertyBag->addProperty('zipper_id', "");
+            $propertyBag->addProperty('tchecker_id', "");
             $result->setProperties($propertyBag);
 
             $location = $this->createLocation(
