@@ -254,7 +254,8 @@ class MyInputsInternalApi
                 if ($mySink->isInstance() && $myFunc->isType(MyFunction::TYPE_FUNC_METHOD)) {
                     if (!is_null($myClass)
                         && ($mySink->getInstanceOfName() === $myClass->getName()
-                            || $mySink->getInstanceOfName() === $myClass->getExtendsOf())) {
+                            || $mySink->getInstanceOfName() === $myClass->getExtendsOf())
+                            || $mySink->getInstanceOfName() === "*") {
                         return $mySink;
                     }
                 }
